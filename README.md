@@ -45,7 +45,7 @@ $
 ([archived site as promised](https://web.archive.org/web/20240613145546/https://www.linuxfromscratch.org/blfs/view/svn/basicnet/lynx.html))
 
 ```
-urlstr1="https://web.archive.org/web/20240613143341/"
+$ urlstr1="https://web.archive.org/web/20240613143341/"
 $ #  really don't need that 1st 1 unless you want exact reproducibility
 $ #+ so the final `lynx` command could be without "${urlstr1}"
 $ urlstr2="https://simple.wikipedia.org/wiki/List_of_elements_by_symbol"
