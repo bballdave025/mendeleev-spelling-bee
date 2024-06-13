@@ -173,6 +173,8 @@ If the time were there, the high-difficulty (or at least high-time-used) solutio
 
 A few low-difficulty (or at least low-time-used) solutions, some available tools such as those listed or discussed at the following places
 
+https://nlp.stanford.edu/software/lex-parser.html
+
 https://github.com/jxmorris12/language_tool_python
 
 https://www.afterthedeadline.com/development.html
