@@ -1,6 +1,5 @@
 # mendeleev-spelling-bee
-A little NLP fun, finding which words can be made using only the symbols of Mendeleev's Table (perhaps more commonly, though less justly) also known as the Periodic Table. The trick here is that we will use multiple languages. Even scripts, let's be specific, the [writing system](https://en.wikipedia.org/wiki/Writing_system) ([archived](https://web.archive.org/web/20240613141523/https://en.wikipedia.org/wiki/Writing_system)) type of scripts, (to the degree that they can be found), starting with Cyrillic.
-
+A little NLP fun: finding which words can be made using only the symbols of Mendeleev's Table, more commonly known as the period table (perhaps less justly also known as that). The trick here is that we will use multiple languages. We'll even try to use scripts - let's be specific, the [writing system](https://en.wikipedia.org/wiki/Writing_system) ([archived](https://web.archive.org/web/20240613141523/https://en.wikipedia.org/wiki/Writing_system)) type of scripts (to the degree that Periodic Tables can be found in other scripts) - starting with Cyrillic.
 
 # Content of README
 
@@ -24,6 +23,8 @@ Well, &nbsp;&nbsp;`Sulfur` `Oxygen` &nbsp;&nbsp; `Chlorine` `Oxygen` `Selenium` 
 <kbd>S</kbd><kbd>O</kbd> &nbsp;&nbsp; <kbd>Cl</kbd><kbd>O</kbd><kbd>Se</kbd>
 
 I do think I should get extra points for using both `Francium` and `Gallium` in this section.
+
+[Skip to the _Some fun goals for which to shoot_ section](#Some-fun-goals-for-which-to-shoot) if you don't want to see my `bash` ramblings.
 
 ## Let's see if we can quickly find some examples that are more fun
 
@@ -162,13 +163,13 @@ Tl Tm Ts U V W Xe Y Yb Zn Zr
 
 (It would have been more efficient to put the output of `lynx` into a string, but I don't think it would have been as clear.)
 
-# Some fun goals to shoot for
+# Some fun goals for which to shoot
 
 ## Find if a Mendeleevan string (I might have just made that word up) is sensible. 
 
 This could, in probably a mid-difficulty (or at least mid-time-used) solution, use a context-free-grammar and a parser. 
 
-If the time were there, the high-difficulty (or at least high-time-used) solution, a.k.a. the fun solution, is the task of collecting a dataset of sensible and non-sensible strings and to train a not-very-deep neural network. Since this would probably look for funny, 2-year-old time phrases, a custom dataset would be ideal. Perhaps one could use a web scraper for sensible examples and something such as the Library of Babel for those which are nonsensible. Actually, training something with a degree-of-sensibility output would be awesome, but would probably need more of a LLM-type solution and almost certainly a new dataset (unless perplexity could be hacked more than I realize it can be).
+If the time were there, the high-difficulty (or at least high-time-used) solution, a.k.a. <b>the fun solution</b>, is the task of collecting a dataset of sensible and non-sensible strings and to train a not-very-deep neural network. Since this would probably look for funny, 2-year-old time phrases, a custom dataset would be ideal. Perhaps one could use a web scraper for sensible examples and something such as the Library of Babel for those which are nonsensible. Actually, training something with a degree-of-sensibility output would be awesome, but would probably need more of a LLM-type solution and almost certainly a new dataset (unless perplexity could be hacked more than I realize it can be). By the way, asking an LLM such as [ChatGPT](https://chat.openai.com/) if the sentence makes sense is the least-fun solution.
 
 A few low-difficulty (or at least low-time-used) solutions, some available tools such as those listed or discussed at the following places
 
