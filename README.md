@@ -14,7 +14,7 @@ Basic - find words and phrases that can be created by using the symbols from the
 
 `Francium` `Silver` = <kbd>Fr</kbd><kbd>Ag</kbd> , which is an adjective for a type of grenade or a verb that has come into normal English usage due to video games.
 
-The work below (in the section, Let's see if we can quickly find some examples that are more fun) gives me a quick fun one,
+The work below (in the section, _Let's see if we can quickly find some examples that are more fun_), gives me a quick fun one,
 
 `Thorium` `Iodine` `Sulfur` &nbsp;&nbsp; `Flerovium` `Americium` `Gallium` &nbsp;&nbsp;&nbsp;&nbsp; is &nbsp;&nbsp;&nbsp;&nbsp;
 <kbd>Th</kbd><kbd>I</kbd><kbd>S</kbd> &nbsp;&nbsp; <kbd>Fl</kbd><kbd>Am</kbd><kbd>In</kbd><kbd>Ga</kbd>
@@ -22,6 +22,8 @@ The work below (in the section, Let's see if we can quickly find some examples t
 Well, &nbsp;&nbsp;`Sulfur` `Oxygen` &nbsp;&nbsp; `Chlorine` `Oxygen` `Selenium` &nbsp;&nbsp; to 'This Flamingo'
 
 <kbd>S</kbd><kbd>O</kbd> &nbsp;&nbsp; <kbd>Cl</kbd><kbd>O</kbd><kbd>Se</kbd>
+
+I do think I should get extra points for using both `Francium` and `Gallium` in this section.
 
 ## Let's see if we can quickly find some examples that are more fun
 
