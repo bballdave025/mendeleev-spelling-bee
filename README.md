@@ -129,7 +129,7 @@ Ac Ag Al Am Ar As At Au B Ba Be Bh Bi Bk Br C Ca Cd Ce Cf Cl Cm Cn Co Cr Cs Cu D
 Here, it would have been a bit more complicated to get the names and symbols, but it could be done (for example) with 
 `lynx -dump -nolist "${urlstr1}${urlstr2}" | awk 'NR>=152&&NR<= 309' | sed -n '/^[ ]\+\([A-Za-z]\{1,2\}\)[ ]\([A-Za-z]\+\)[ ]/p' | awk '{print $2 "=" $1}'`
 
-Oh, you should also note that I've used three ways to get the lines I wanted by line number. They are, without explanation, 1) ` | sed -n '<first>,<next-to-last>p;<last>q'` (best for large files). 2) ` | sed -n '<first>,<last>p'`. and 3) ` | awk 'NR>=<first>&&NR<=<last>'` (okay for large files, I believe).
+Oh, you should also note that I've used three ways to get the lines I wanted by line number. They are, without explanation, 1) ` | sed -n '{first},{next-to-last}p;{last}q'` (best for large files). 2) ` | sed -n '{first},{last}p'`. and 3) ` | awk 'NR>={first}&&NR<={last}'` (okay for large files, I believe).
 
 ### All the element symbols in a nice way
 
@@ -158,7 +158,7 @@ Rn Ru S Sb Sc Se Sg Si Sm Sn Sr Ta Tb Tc Te Th Ti
 Tl Tm Ts U V W Xe Y Yb Zn Zr
 ```
 
-(I'm not going to make it look like the actual periodic table, right now, no matter how tempting it is.)
+(I'm not going to make it look like the actual periodic table, right now, no matter how tempting it is.) (There will probably be a `bash` script forthcoming.)
 
 (It would have been more efficient to put the output of `lynx` into a string, but I don't think it would have been as clear.)
 
