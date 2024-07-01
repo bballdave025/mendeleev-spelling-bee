@@ -1,3 +1,32 @@
+#@brief   A .gitignore file for my solid-rotary-phone
+#@file    .gitignore
+#@author  David BLACK  GH: @bballdave025
+#@since   2024-06-13
+#
+#  -v- In case this file gets copied to another repo without changing -v-
+#+ -v- this stuff, there will be a reference to the previous repo     -v-
+#@orig_repo  mendeleev-spelling-bee
+#@project    mendeleev-spelling-bee
+#@package    None for now.
+
+
+# Specific directories
+**/__pycache__/
+
+**/.ipynb_checkpoints/
+
+# None of those backup files
+*~
+
+# None of those Windows Office (at least MS Word) backup files
+$~*
+
+
+
+# The template from GitHub for a Python repo
+# Fetched approximately 2024-06-13
+## >>>>>>>>>> Start GitHub Python template for .gitignore >>>>>>>>>>
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -160,3 +189,5 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+## <<<<<<<<<< End GitHub Python template for .gitignore <<<<<<<<<<
