@@ -7,7 +7,7 @@
 #+ -v- this stuff, there will be a reference to the previous repo     -v-
 #@orig_repo  mendeleev-spelling-bee
 #@project    mendeleev-spelling-bee
-#@package    None for now.
+#@package    mendeleevspellingbee
 
 
 # Specific directories
@@ -17,10 +17,14 @@
 
 # None of those backup files
 *~
+.*~
+*.un~
 
 # None of those Windows Office (at least MS Word) backup files
 $~*
-
+~$*
+~WRL*
+~*
 
 
 # The template from GitHub for a Python repo
