@@ -12,20 +12,20 @@ def test_help_flag():
 
 def test_raw_latin_symbols():
     result = subprocess.run(
-        CLI + ["-d", "cool,cook,bacon", "-s", "H,He,B,C,N,O,Ac,Na,Cl,U,Co,K"],
+        CLI + ["-d", "cook,cool,hi,bacon,car,flamingo,rain", "-s", "H,He,B,C,N,O,Ac,Na,Cl,U,Co,K"],
         capture_output=True, text=True
     )
     assert result.returncode == 0
-    assert "cool" in result.stdout or "cook" in result.stdout
+    assert "cook" in result.stdout and "cook" in result.stdout
     print("✅ test_raw_latin_symbols passed")
 
 def test_raw_cyrillic_symbols():
     result = subprocess.run(
-        CLI + ["-d", "бор,кислород,углерод", "-s", "Бо,Ки,Уг"],
+        CLI + ["-d", "урал,аккордион,аккордам,уг,акцепт", "-s", "Ур,Ал,Ки,Ак,Ко,Рд"],
         capture_output=True, text=True
     )
     assert result.returncode == 0
-    assert "бор" in result.stdout or "кислород" in result.stdout
+    assert "урал" in result.stdout and "аккордам" in result.stdout
     print("✅ test_raw_cyrillic_symbols passed")
 
 def test_builtin_latin_symbols_with_latin_dict():
@@ -34,12 +34,12 @@ def test_builtin_latin_symbols_with_latin_dict():
         capture_output=True, text=True
     )
     assert result.returncode == 0
-    assert "neon" in result.stdout or "argon" in result.stdout
+    assert "rain" in result.stdout and "close" in result.stdout
     print("✅ test_builtin_latin_symbols_with_latin_dict passed")
 
 def test_builtin_cyrillic_symbols_with_russian_dict():
     with tempfile.NamedTemporaryFile("w+", encoding="utf-8", delete=False) as f:
-        f.write("бор\nкислород\nуглерод\n")
+        f.write("урал\nуг\nаккордам\nаккордион\nакцепт\nтунисе\n")
         f.flush()
         path = f.name
 
@@ -49,12 +49,12 @@ def test_builtin_cyrillic_symbols_with_russian_dict():
     )
     os.unlink(path)
     assert result.returncode == 0
-    assert "бор" in result.stdout or "кислород" in result.stdout
+    assert "тунисе" in result.stdout and "аккордион" in result.stdout
     print("✅ test_builtin_cyrillic_symbols_with_russian_dict passed")
 
 def test_mismatch_latin_symbols_with_russian_dict():
     with tempfile.NamedTemporaryFile("w+", encoding="utf-8", delete=False) as f:
-        f.write("бор\nкислород\nуглерод\n")
+        f.write("урал\nуг\nаккордам\nаккордион\nакцепт\nтунисе\n")
         f.flush()
         path = f.name
 

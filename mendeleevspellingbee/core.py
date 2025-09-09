@@ -7,6 +7,7 @@ mendeleevspellingbee
 
 import sys
 import argparse
+import errno
 from mendeleevspellingbee import __version__
 from mendeleevspellingbee.symbols import SYMBOL_SETS
 from mendeleevspellingbee.utils import parse_dictionary, find_element_words
@@ -25,6 +26,7 @@ def main(argv=None):
     ap.add_argument("-p", "--part-of-speech",
                     choices=["noun", "verb", "adjective", "adverb"],
                     help="Filter words by part of speech (English only)")
+    ap.add_argument('-f', "--try-flush", action='store_true', help="Enable flushing for the print command; trying to flush per-line")
     ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     args = ap.parse_args(argv)
 
@@ -34,9 +36,27 @@ def main(argv=None):
     if args.part_of_speech:
         words = filter_by_pos(words, args.part_of_speech)
 
-    matches = find_element_words(words, symbols)
-    for word, path in matches:
-        print(f"{word} => {'|'.join(path)}")
+    try:
+        matches = find_element_words(words, symbols)
+        for word, path in matches:
+            if args.try_flush:
+                # stream and flush properly to allow easier piping to head, 
+                #+ less, etc.
+                #+ or simply to allow viewing a subset of the results with
+                #+ sed, awk, grep, etc.
+                #+
+                #+ Note that the program will still compute the complete
+                #+ constructable word list before performing any of the
+                #+ functions to which it's piped
+                #+ @TODO : streaming decoder using yield
+                print(f"{word} => {'|'.join(path)}", flush=True)
+            else:
+               print(f"{word} => {'|'.join(path)}")
+    except OSError as e:
+        if e.errno == errno.EPIPE:
+            sys.exit(0)
+    finally:
+        pass
 
 
 def load_symbols(args):
