@@ -26,6 +26,9 @@ $~*
 ~WRL*
 ~*
 
+# Taking care of a pattern I often use, in case I haven't `rm -r`ed it
+tmp/
+
 
 # The template from GitHub for a Python repo
 # Fetched approximately 2024-06-13
