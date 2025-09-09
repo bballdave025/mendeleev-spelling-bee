@@ -6,7 +6,7 @@
 from setuptools import setup, find_packages
 
 ## For first time setup, use:
-#__version__ = "0.1.0"
+#__version__ = "0.1.1"
 # Instead of what will work from then on:
 from mendeleevspellingbee import __version__
 
