@@ -1,9 +1,54 @@
 # mendeleev-spelling-bee
 A little NLP fun: finding which words can be made using only the symbols of Mendeleev's Table, more commonly known as the period table (perhaps less justly also known as that). The trick here is that we will use multiple languages. We'll even try to use scripts - let's be specific, the [writing system](https://en.wikipedia.org/wiki/Writing_system) ([archived](https://web.archive.org/web/20240613141523/https://en.wikipedia.org/wiki/Writing_system)) type of scripts (to the degree that Periodic Tables can be found in other scripts) - starting with Cyrillic.
 
-# Content of README
+## Mendeleev Spelling Bee: Cyrillic Symbol Table
 
-(More than just "blah").
+This table maps each element to a unique Cyrillic symbol, avoiding collisions and honoring phonetic, historical, and cultural logic. For full spreadsheet import, see the CSV file in the repo: `data/cyrillic-symbols.csv`.
+
+| Z  | English Name     | Latin Symbol | Russian Name     | Cyrillic Symbol | Justification |
+|----|------------------|--------------|------------------|------------------|----------------|
+| 1  | Hydrogen         | H            | Водород          | Вд               | From "Водород" |
+| 2  | Helium           | He           | Гелий            | Ге               | Phonetic match |
+| 3  | Lithium          | Li           | Литий            | Ли               | Direct match |
+| 4  | Beryllium        | Be           | Бериллий         | Бе               | Direct match |
+| 5  | Boron            | B            | Бор              | Бо               | Phonetic match |
+| 6  | Carbon           | C            | Углерод          | Уг               | From "Углерод" |
+| 7  | Nitrogen         | N            | Азот             | Аз               | From "Азот" |
+| 8  | Oxygen           | O            | Кислород         | Ки               | From "Кислород" |
+| 9  | Fluorine         | F            | Фтор             | Фт               | From "Фтор" |
+| 10 | Neon             | Ne           | Неон             | Не               | Direct match |
+| 11 | Sodium           | Na           | Натрий           | Нт               | From "Натрий" |
+| 12 | Magnesium        | Mg           | Магний           | Мг               | Latin match |
+| 13 | Aluminum         | Al           | Алюминий         | Ал               | Direct match |
+| 14 | Silicon          | Si           | Кремний          | Кр               | From "Кремний" |
+| 15 | Phosphorus       | P            | Фосфор           | Фо               | From "Фосфор" |
+| 16 | Sulfur           | S            | Сера             | Се               | Phonetic match |
+| 17 | Chlorine         | Cl           | Хлор             | Хл               | Direct match |
+| 18 | Argon            | Ar           | Аргон            | Ар               | Direct match |
+| 19 | Potassium        | K            | Калий            | Кл               | From "Калий" |
+| 20 | Calcium          | Ca           | Кальций          | Ка               | Collision resolved |
+| 21 | Scandium         | Sc           | Скандий          | Ск               | Direct match |
+| 22 | Titanium         | Ti           | Титан            | Ти               | Collision resolved |
+| 23 | Vanadium         | V            | Ванадий          | Вн               | From "Ванадий" |
+| 24 | Chromium         | Cr           | Хром             | Хр               | From "Хром" |
+| 25 | Manganese        | Mn           | Марганец         | Мн               | Collision resolved |
+| 26 | Iron             | Fe           | Железо           | Же               | From "Железо" |
+| 27 | Cobalt           | Co           | Кобальт          | Ко               | Direct match |
+| 28 | Nickel           | Ni           | Никель           | Нк               | Collision resolved |
+| 29 | Copper           | Cu           | Медь             | Ме               | From "Медь" |
+| 30 | Zinc             | Zn           | Цинк             | Цн               | From "Цинк" |
+| 31 | Gallium          | Ga           | Галлий           | Га               | Direct match |
+| 32 | Germanium        | Ge           | Германий         | Гм               | Collision resolved |
+| 33 | Arsenic          | As           | Мышьяк           | Мш               | From "Мышьяк" |
+| 34 | Selenium         | Se           | Селен            | Сл               | Collision resolved |
+| 35 | Bromine          | Br           | Бром             | Бр               | Direct match |
+| 36 | Krypton          | Kr           | Криптон          | Кт               | From "Криптон" |
+| 37 | Rubidium         | Rb           | Рубидий          | Рб               | Collision resolved |
+| 38 | Strontium        | Sr           | Стронций         | Ст               | Direct match |
+| 39 | Yttrium          | Y            | Иттрий           | Ит               | Phonetic match |
+| 70 | Ytterbium        | Yb           | Иттербий         | Ы                | Wildcard poetic assignment |
+
+*Note: Full table continues in `data/cyrillic-symbols.csv`.*
 
 # The Basics
 
