@@ -1,0 +1,1 @@
+python -c "import difflib; print([w for w in open('/usr/share/dict/words') if 0 < difflib.SequenceMatcher(None, w.strip(), 'mendeleevspellingbee').ratio() > 0.7])'"
